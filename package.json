@@ -1,0 +1,25 @@
+{
+  "name": "websocketsamples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon --watch public/ app.js",
+    "demon": "pm2 start app.js",
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyunsu00/websocketSamples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyunsu00/websocketSamples/issues"
+  },
+  "homepage": "https://github.com/hyunsu00/websocketSamples#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0"
+  }
+}
