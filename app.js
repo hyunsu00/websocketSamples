@@ -1,6 +1,7 @@
+require("./websocketServer");
+
 const express = require("express");
 const app = express();
-require("./public/websocketServer");
 
 app.use(express.static("public"));
 

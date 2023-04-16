@@ -3,35 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="application/javascript" src="websocketClient.js"></script>
     <title>Websocket Chatting</title>
-
-    <script>
-      function clearMessage() {
-        document.getElementById("message").value = "";
-      }
-
-      const ws = new WebSocket("ws://localhost:8001");
-
-      // 메세지 전송
-      function sendMessage() {
-        const nickname = document.getElementById("nickname").value;
-        const message = document.getElementById("message").value;
-        const fullMessage = `${nickname}: ${message}`;
-
-        ws.send(fullMessage);
-        clearMessage();
-      }
-
-      // 메세지 수신
-      ws.onmessage = (event) => {
-        const chat = document.createElement("div");
-        const message = document.createTextNode(event.data);
-        chat.appendChild(message);
-
-        const chatLog = document.getElementById("chat-log");
-        chatLog.appendChild(chat);
-      };
-    </script>
   </head>
   <body>
     <h1>Hudi Chat</h1>
